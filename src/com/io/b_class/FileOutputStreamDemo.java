@@ -14,7 +14,7 @@ public class FileOutputStreamDemo {
 		try {
 			//向文件中写入字节数组
 			String font="输出流是用来写入数据的！";
-			FileOutputStream fos=new FileOutputStream("FOSDemo.txt");
+			FileOutputStream fos=new FileOutputStream("resources/FOSDemo.txt");
 			fos.write(font.getBytes());
 			//关闭此文件输出流并释放与此流有关的所有系统资源，此文件输出流不能再用于写入字节。
 			fos.close();

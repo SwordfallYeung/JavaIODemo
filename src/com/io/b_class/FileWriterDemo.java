@@ -13,7 +13,7 @@ public class FileWriterDemo {
 	public static void main(String[] args) throws Exception{
 		FileWriter fw=null;
 		try {
-			fw=new FileWriter("file.txt");
+			fw=new FileWriter("resources/file.txt");
 			fw.write("hello world!");
 		} catch (IOException e) {
 			System.out.println(e.toString());

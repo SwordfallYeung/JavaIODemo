@@ -14,8 +14,8 @@ public class FileInputStreamDemo {
 	public static void main(String[] args) {
 		try {
 			//使用FileInputStream和FileOutputStream进行文件复制
-			FileInputStream fis=new FileInputStream("file.txt");
-			FileOutputStream fos=new FileOutputStream("file1.txt");
+			FileInputStream fis=new FileInputStream("resources/file.txt");
+			FileOutputStream fos=new FileOutputStream("resources/file1.txt");
 
 			int read;
 			byte[] b=new byte[1024];

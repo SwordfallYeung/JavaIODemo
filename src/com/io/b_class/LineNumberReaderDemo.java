@@ -22,7 +22,7 @@ public class LineNumberReaderDemo {
 		FileReader fileReader=null;
 
 		try {
-			fileReader=new FileReader("file.txt");
+			fileReader=new FileReader("resources/file.txt");
 			lineNumberReader =new LineNumberReader(fileReader);
 			String line=null;
 			while ((line=lineNumberReader.readLine())!=null){

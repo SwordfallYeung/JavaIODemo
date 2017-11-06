@@ -25,7 +25,7 @@ import java.io.*;
  **/
 public class FileDescriptorDemo {
 
-	private static final String FileName="file.txt";
+	private static final String FileName="resources/file.txt";
 	private static final String OutText = "Hi FileDescriptor";
 
 	public static void main(String[] args) {

@@ -18,7 +18,7 @@ import java.io.FileReader;
 public class FileReaderDemo {
 
 	public static void main(String[] args) throws Exception{
-		FileReader fr=new FileReader("file.txt");
+		FileReader fr=new FileReader("resources/file.txt");
 		/**
 		 * 用Reader中的read方法读取字符char。
 		 */

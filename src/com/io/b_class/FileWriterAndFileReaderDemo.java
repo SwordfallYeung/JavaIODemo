@@ -16,8 +16,8 @@ public class FileWriterAndFileReaderDemo {
 		FileWriter fw=null;
 
 		try {
-			fr=new FileReader("file.txt");
-			fw=new FileWriter("file1.txt");
+			fr=new FileReader("resources/file.txt");
+			fw=new FileWriter("resources/file1.txt");
 
 			//读一个字符，写一个字符方法
 		/*int ch=0;

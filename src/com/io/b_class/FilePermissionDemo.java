@@ -23,10 +23,10 @@ public class FilePermissionDemo {
 		boolean bool=false;
 
 		//create new file permissions
-		fp=new FilePermission("file.txt","read");
-		fp1=new FilePermission("file1.txt","read");
-		fp2=new FilePermission("file.txt","write");
-		fp3=new FilePermission("file.txt","read");
+		fp=new FilePermission("resources/file.txt","read");
+		fp1=new FilePermission("resources/file1.txt","read");
+		fp2=new FilePermission("resources/file.txt","write");
+		fp3=new FilePermission("resources/file.txt","read");
 
 		//checks two file permission objects for equality
 		bool=fp.equals(fp1);
@@ -52,7 +52,7 @@ public class FilePermissionDemo {
 		FilePermission fp=null;
 
 		//create new file permissions
-		fp=new FilePermission("file.txt","read");
+		fp=new FilePermission("resources/file.txt","read");
 
 		//the canonical string representation of the action
 		String s=fp.getActions();
@@ -71,10 +71,10 @@ public class FilePermissionDemo {
 		boolean bool=false;
 
 		//create new file permission
-		fp=new FilePermission("file.txt","read");
-		fp1=new FilePermission("file.txt","write");
-		fp2=new FilePermission("file1.txt","read");
-		fp3=new FilePermission("file.txt","read");
+		fp=new FilePermission("resources/file.txt","read");
+		fp1=new FilePermission("resources/file.txt","write");
+		fp2=new FilePermission("resources/file1.txt","read");
+		fp3=new FilePermission("resources/file.txt","read");
 
 		//tests if implied by this object
 		bool=fp.implies(fp1);
@@ -95,7 +95,7 @@ public class FilePermissionDemo {
 		PermissionCollection pc = null;
 
 		//create new file permissions
-		fp = new FilePermission("file.txt", "read");
+		fp = new FilePermission("resources/file.txt", "read");
 
 		// create new permission collection
 		pc = fp.newPermissionCollection();
@@ -103,7 +103,7 @@ public class FilePermissionDemo {
 		// add permission to the permission collection
 		pc.add(fp);
 
-		if(pc.implies(new FilePermission("file.txt", "read"))) {
+		if(pc.implies(new FilePermission("resources/file.txt", "read"))) {
 			System.out.println("Permission for \"file.txt\" is read");
 		}
 	}

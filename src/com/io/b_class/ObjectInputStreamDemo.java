@@ -18,12 +18,12 @@ public class ObjectInputStreamDemo {
         Student s1=new Student("张三",1,15,"化学");
         Student s2=new Student("李四",2,19,"生物");
 
-        FileOutputStream fout=new FileOutputStream("student.txt");
+        FileOutputStream fout=new FileOutputStream("resources/student.txt");
         ObjectOutputStream out=new ObjectOutputStream(fout);
         out.writeObject(s1);
         out.writeObject(s2);
         out.close();
-        FileInputStream fin=new FileInputStream("student.txt");
+        FileInputStream fin=new FileInputStream("resources/student.txt");
         ObjectInputStream in=new ObjectInputStream(fin);
 
         s1=(Student)in.readObject();
