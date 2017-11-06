@@ -1,5 +1,10 @@
 package com.io.b_class;
 
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PushbackReader;
+
 /**
  * @author y15079
  * @create 2017-11-06 20:05
@@ -13,8 +18,41 @@ package com.io.b_class;
  * http://blog.csdn.net/fwch1982/article/details/7878542
  **/
 public class PushbackReaderDemo {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
 		char[] symbols={'<','>', '≦', '≧', '≠', '＝'};
-		
+		try {
+			PushbackReader pushbackReader=new PushbackReader(new FileReader("resources/file.txt"));
+			FileWriter fileWriter=new FileWriter("resources/file1.txt");
+			int c=0;
+			while ((c=pushbackReader.read())!=-1){
+                int poss=-1;
+                switch (c){
+                    case '<':
+                        poss=0;break;
+                    case '>':
+                        poss=1;break;
+                    case '!':
+                        poss=2;break;
+                    case '=':
+                        poss=5;break;
+                    default:
+                        fileWriter.write(c);
+                }
+                if (poss!=-1){
+                    if ((c=pushbackReader.read())=='='){
+                        fileWriter.write(symbols[poss+2]);
+                        fileWriter.write(' ');
+                    }else {
+                        pushbackReader.unread(c);
+                        fileWriter.write(symbols[poss]);
+                    }
+                }
+            }
+			pushbackReader.close();
+			fileWriter.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
 	}
 }

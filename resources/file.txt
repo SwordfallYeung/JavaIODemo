@@ -1,1 +1,8 @@
 hello world!
+x+y<=3
+y+z!=w
+1+x>=4
+x+y>3
+x-y<4
+1+1=2
+!2
